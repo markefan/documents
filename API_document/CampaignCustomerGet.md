@@ -12,7 +12,7 @@ This api is used to get target customers of a campaign. You have to pass access_
 |campaignId	|Intger	|True|
 
 #### JSON戻り値 例：
-```json:.json
+```json :Json
 {
     "code": 200,
     "message": "Success",
@@ -59,7 +59,7 @@ This api is used to get target customers of a campaign. You have to pass access_
 
 This method is used to get the customers of a particular camapign. It will return the response json from Api.
 
-```java:.java
+``` java :Java
 private String getCampaignCustomers(String accessToken, int campaignId) {
 		try {
 			HttpClient client = new DefaultHttpClient();
@@ -88,6 +88,6 @@ private String getCampaignCustomers(String accessToken, int campaignId) {
 ```
 
 #### 呼び出し方法
-```java:.java
+```java :Java
 String response = getCampaignCustomers(“98d9a7ea-8669-45e6-b141-f663c8cb35b8”, 526);
 ```
