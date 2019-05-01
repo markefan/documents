@@ -11,7 +11,7 @@
   * [メールの未開封／未クリックを取得する](API_document/CampaignStatusAdvancedGet.md)  
   * [リード情報を取得する](API_document/CustomerGet.md)  
   * [セグメントに属するリードを取得する](API_document/CustomerBySegmentGet.md) 
-  * [キャンペーン対象のリードを取得する](API_document/CampaignCustoemrGet.md)  
+  * [キャンペーン対象のリードを取得する](API_document/CampaignCustomerGet.md)  
 * [コードサンプル](Code_Sample/index.md)
 * [サンプルアプリ](App_Sample/index.md)
 
