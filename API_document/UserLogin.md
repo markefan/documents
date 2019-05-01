@@ -14,10 +14,7 @@
 
 #### HTTP戻り値 : JSON  
 
-<details>  
-<summary>#### JSON戻り値 例：</summary>
-<pre>
-<code>
+#### JSON戻り値 例：  
 ```json
 {
     "code": 200,
@@ -49,9 +46,6 @@
     }
 }
 ```
-</code>
-</pre>
-</details>
 
 #### サンプルコード 
 This method used for login, you have to pass username and password as the parameter to this method and it will return the response from API. It contains users details, such as userId, accessToken etc.
