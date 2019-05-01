@@ -1,1 +1,1 @@
-- [Excel VBA サンプル](VBAコードサンプル.md)
+* [Excel VBA サンプル](VBAコードサンプル.md)
