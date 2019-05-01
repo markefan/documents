@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Markefan API ドキュメント](README.md)
+* [Markefan 開発ドキュメント](README.md)
 * [主なAPIの仕様](API_document/index.md)
   * [Markefanへログインする](API_document/UserLogin.md)  
   * [Markefanへのリードのインポート](API_document/CustomerImport.md)
