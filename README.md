@@ -1,2 +1,2 @@
-# Markefan API ドキュメント
+# Markefan 開発ドキュメント
 
