@@ -19,5 +19,6 @@ APIを使用した開発の依頼やサポートをご希望の場合は、担�
 * [メールの未開封／未クリックを取得する](CampaignStatusAdvancedGet.md)  
 * [リード情報を取得する](CustomerGet.md)  
 * [セグメントに属するリードを取得する](CustomerBySegmentGet.md)  
+* [キャンペーン対象のリードを取得する](CampaignCustoemrGet.md)  
 
 
