@@ -12,7 +12,7 @@ This api is used to get target customers of a campaign. You have to pass access_
 |campaignId	|Intger	|True|
 
 #### JSON戻り値 例：
-```json
+```json:JSON
 {
     "code": 200,
     "message": "Success",
@@ -88,6 +88,6 @@ private String getCampaignCustomers(String accessToken, int campaignId) {
 ```
 
 #### 呼び出し方法
-```java
+```java:JAVA
 String response = getCampaignCustomers(“98d9a7ea-8669-45e6-b141-f663c8cb35b8”, 526);
 ```
