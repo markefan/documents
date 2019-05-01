@@ -6,18 +6,18 @@ Markefanの持つ約350のAPIを活用することで、CRM、SFA、Chatbotや�
 APIを使用した開発の依頼やサポートをご希望の場合は、担当の代理店またはマーケファン株式会社の販売担当までお問い合わせください。
 
 ### ログイン制御のAPI
-* [Markefanへログインする](API_document_rev2.md)  
+* [Markefanへログインする](UserLogin.md)  
 
 ### データをインポートする API
-* [Markefanへのリードのインポート](API_document_rev2.md)  
-* [Markefanへのリードの高度なインポート](API_document_rev2.md)  
-* [既存キャンペーンにリードを追加する](API_document_rev2.md)  
-* [リードを削除する](API_document_rev2.md)  
+* [Markefanへのリードのインポート](CustomerImport.md)  
+* [Markefanへのリードの高度なインポート](CustomerAdvancedImport.md)  
+* [既存キャンペーンにリードを追加する](MailMagazineUpdate.md)  
+* [リードを削除する](CustomerDelete.md)  
 
 ### データを取得する API
-* [メールのステータスを取得する](API_document_rev2.md)  
-* [メールの未開封／未クリックを取得する](API_document_rev2.md)  
-* [リード情報を取得する](API_document_rev2.md)  
-* [セグメントに属するリードを取得する](API_document_rev2.md)  
+* [メールのステータスを取得する](CampaignStatusGet.md)  
+* [メールの未開封／未クリックを取得する](CampaignStatusAdvancedGet.md)  
+* [リード情報を取得する](CustomerGet.md)  
+* [セグメントに属するリードを取得する](CustomerBySegmentGet.md)  
 
 
