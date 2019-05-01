@@ -1,7 +1,8 @@
 # Table of contents
 
 * [Markefan API ドキュメント](README.md)
-* [主なAPIコード](api_document.md)
-* [コードサンプル](code_smple.md)
-* [アプリケーションサンプル](apurikshonsanpuru.md)
+* [主なAPI](api/README.md)
+  * [Untitled](api/untitled.md)
+* [コードサンプル](kdosanpuru.md)
+* [サンプルアプリ](sanpuruapuri.md)
 
