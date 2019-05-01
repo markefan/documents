@@ -59,7 +59,7 @@ This api is used to get target customers of a campaign. You have to pass access_
 
 This method is used to get the customers of a particular camapign. It will return the response json from Api.
 
-```java
+```java:JAVA
 private String getCampaignCustomers(String accessToken, int campaignId) {
 		try {
 			HttpClient client = new DefaultHttpClient();
