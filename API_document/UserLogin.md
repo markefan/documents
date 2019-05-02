@@ -1,6 +1,4 @@
-﻿# API Document
-
-## ログイン操作
+﻿## ログイン操作
 
 #### HTTP種類 : POST
 #### URL : (BASE URL)**/SpringRest/account/user/login**
