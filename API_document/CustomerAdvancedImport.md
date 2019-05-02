@@ -1,11 +1,13 @@
-﻿## リードの拡張インポート
+﻿# Markefanへのリードの高度なインポート  
 
-This api is used to import customers to MIP. Using parameter doMergeCsvWithDb , if existing customers is in uploading csv then it will be updated. This update is done based on ext_customer_id.
+このAPIでは、This api is used to import customers to MIP. Using parameter doMergeCsvWithDb パラメータを指定したリードのインポートを行います。  
+もし既にリードが存在している場合、そのリードはCSVファイルの内容で更新されます。この場合、既に存在するリードIDは、ext_customer_id で指定します。  
 
 #### HTTP種類 : POST
-#### URL : (BASE URL)**/SpringRest/customer/advanced/import**
-#### HTTP戻り値 : JSON
-#### パラメータ 
+#### URL : <BASE URL>/SpringRest/customer/advanced/import  
+#### HTTP戻り値 : JSON  
+#### パラメータ  
+
 | 名 前 |	型	| 必 須 |
 |:----:|:---:|:---:|
 |access_token	|String	|True|
@@ -14,17 +16,17 @@ This api is used to import customers to MIP. Using parameter doMergeCsvWithDb , 
 |format	|String	|True|
 |doMergeCsvWithDb	|Boolean	|True|
 
-For cxm format parameter value is  
+format パラメータは以下のように指定します：    
 `
 format = name,email,gender,birthday,company_name,phone,department,role,industry,country_id,region,prefecture_id,muncipality_id,ext_customer_id
 `  
 
-Sample csv data giving below  
+csv データファイルは以下のように指定します：  
 `
 ancil,abc@gmail.com,0,1990-03-01,ABC Inc,9876543210,IT,Engineers,情報通信業,日本,北海道地方,北海道,札幌市,10
 `  
 
-For gender
+gender（性別）は以下のように指定します：  
 ```
 0 – Male
 1 – Female
@@ -51,7 +53,9 @@ For gender
 ```
 
 #### サンプルコード
-This method used for customer advanced import in this method you have to pass the csv files File object, userId, format and access token. Where userId will get while calling login API. Format is in which format we are created csv file. Example of calling this method is given below. Method will return the Json response from API.
+このメソッドを使用するには、CSVファイルのパス、ユーザーID、フォーマットおよびアクセストークンを渡す必要があります。  
+ユーザーIDはloginAPIより取得します。フォーマットはCSVファイルのフォーマットと一致していなければなりません。  
+以下はこのメソッドの呼び出し例で、APIよりJSON戻り値を返します。  
 
 ```java
 private String csvAdvancedImport(String accessToken , File csvFile, String userId, String format) {
