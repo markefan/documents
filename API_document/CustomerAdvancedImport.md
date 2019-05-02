@@ -3,7 +3,7 @@
 もし既にリードが存在している場合、そのリードはCSVファイルの内容で更新されます。この場合、既に存在するリードIDは、ext_customer_id で指定します。  
 
 #### HTTP種類 : POST
-#### URL : <BASE URL>/SpringRest/customer/advanced/import  
+#### URL : [BASE URL]/SpringRest/customer/advanced/import  
 #### HTTP戻り値 : JSON  
 #### パラメータ  
 
