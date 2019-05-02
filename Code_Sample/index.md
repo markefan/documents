@@ -23,5 +23,10 @@ Markefanでは、「静的フォーム」または「ダイナミックフォー
 - ![郵便番号による住所自動入力](./img/postalcode.png)
 
 ``` html
-ここにコードを記述
+<!-- オープンソースのMITライセンス「ajaxzip3」ライブラリを利用しています。 -->
+<script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+<!-- ▼郵便番号入力フィールド(7桁) -->
+<input type="text" name="zip11" size="10" maxlength="8" onkeyup="AjaxZip3.zip2addr(this,'','addr11','addr11');">
+<!-- ▼住所入力フィールド(都道府県 以降の住所) -->
+<input type="text" name="addr11" size="60">
 ```
