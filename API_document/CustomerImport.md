@@ -1,8 +1,6 @@
-﻿## リードのインポート
-
-#### HTTP種類 : POST  
-#### URL : (BASE URL)**/SpringRest/customer/import**
-#### HTTP戻り値 : JSON
+﻿#### HTTP種類 : POST  
+#### URL : <BASE URL>/SpringRest/customer/import  
+#### HTTP戻り値 : JSON  
 #### パラメータ : 
 | 名 前 |	型	| 必 須 |
 |:----:|:---:|:---:|
@@ -10,14 +8,14 @@
 |list|	File|	True|
 |userId|	String|	True|
 |format|	String|	True|
-
-For cxm format parameter value is  
+  
+format パラメータは以下のように指定します：  
 `format = name,email,gender,birthday,company_name,phone,department,role,industry,country_id,region,prefecture_id,muncipality_id`
 
-Sample csv data giving below  
+csv データのサンプルは以下の通りです：  
 `ancil,abc@gmail.com,0,1990-03-01,ABC Inc,9876543210,IT,Engineers,情報通信業,日本,北海道地方,北海道,札幌市`
 
-For gender
+gender（性別）は以下のように指定してください：
 ```
 0 – Male
 1 – Female
@@ -43,7 +41,9 @@ For gender
 ```
 
 #### サンプルコード
-This method used for customer import in this method you have to pass the csv files File object, userId, format and access token. Where userId will get while calling login API. Format is in which format we are created csv file. Example of calling this method is given below. Method will return the Json response from API.
+このメソッドを使用するには、CSVファイルのパス、ユーザーID、フォーマットおよびアクセストークンを渡す必要があります。  
+ユーザーIDはloginAPIより取得します。フォーマットはCSVファイルのフォーマットと一致していなければなりません。  
+以下はこのメソッドの呼び出し例で、APIよりJSON戻り値を返します。  
 
 ```java
 private String csvImport(String accessToken , File csvFile, String userId, String format) {
