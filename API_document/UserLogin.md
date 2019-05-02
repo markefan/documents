@@ -1,6 +1,4 @@
-﻿## ログイン操作
-
-#### HTTP種類 : POST
+﻿#### HTTP種類 : POST
 #### URL : <BASE URL>/SpringRest/account/user/login
 
 #### パラメータ  
@@ -13,7 +11,7 @@
 #### HTTP戻り値 : JSON  
 
 #### JSON戻り値 例：  
-```json sample.json
+```json   
 {
     "code": 200,
     "message": "LOGIN SUCCESS",
@@ -48,7 +46,7 @@
 #### サンプルコード 
 This method used for login, you have to pass username and password as the parameter to this method and it will return the response from API. It contains users details, such as userId, accessToken etc.
 
-```java sample.java
+```java  
 private String loginApi(String username, String password) {
 	try {
 		HttpClient client = new DefaultHttpClient();
@@ -81,7 +79,7 @@ private String loginApi(String username, String password) {
 
 #### 呼び出し方法
 
-```java call.java
+```java  
 String responseJson = loginApi("admin","admin");
 ```
   
