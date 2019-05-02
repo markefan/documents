@@ -1,8 +1,8 @@
-﻿## リードの削除  
+﻿リードを削除します。  
 
 #### HTTP種類 : DELETE  
 
-#### URL : (BASE URL)**/SpringRest/customer/delete**  
+#### URL : [BASE URL]/SpringRest/customer/delete  
 
 #### HTTP戻り値 : JSON  
 
@@ -27,7 +27,8 @@
 ```
 
 #### サンプルコード
-This method is used for customer delete, in this method you have to pass customerId and access token. If you need to delete multiple customers you can give its customerIds as comma separated. If sucessfully deleted then method will return boolean true.
+このメソッドはリードを削除します。このメソッドを使用するには、リードIDとアクセストークンを渡します。複数のリードを削除したい場合は、リードIDをカンマで区切って指定してください。  
+削除に成功すると、true の戻り値を返します。
 
 ```java
 private boolean deleteCustomer(String accessToken , String customerId) {
@@ -57,5 +58,5 @@ private boolean deleteCustomer(String accessToken , String customerId) {
 
 ```java
 boolean delete = deleteCustomer(“98d9a7ea-8669-45e6-b141-f663c8cb35b8”, "82");
-boolean delete = deleteCustomer(“98d9a7ea-8669-45e6-b141-f663c8cb35b8”, "82,81"); //Multiple customers
+boolean delete = deleteCustomer(“98d9a7ea-8669-45e6-b141-f663c8cb35b8”, "82,81"); //複数リードの指定の場合
 ```

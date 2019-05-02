@@ -1,17 +1,15 @@
-﻿## キャンペーン対象リードの取得
+﻿指定したキャンペーンの対象となっているリードを取得します。  
 
-This api is used to get target customers of a campaign. You have to pass access_token and campaignId to the api.
-
-#### HTTP種類 : GET
-#### URL : (BASE URL)**/SpringRest/campaign/component/customer/get**
-#### HTTP戻り値 : JSON
-#### パラメータ :
+#### HTTP種類 : GET  
+#### URL : [BASE URL]/SpringRest/campaign/component/customer/get  
+#### HTTP戻り値 : JSON  
+#### パラメータ :  
 | 名 前 |	型	| 必 須 | 
 |:----:|:---:|:---:|
 |access_token	|String	|True|
 |campaignId	|Intger	|True|
 
-#### JSON戻り値 例：
+#### JSON戻り値 例：  
 ``` json  
 {
     "code": 200,
@@ -57,7 +55,8 @@ This api is used to get target customers of a campaign. You have to pass access_
 
 #### サンプルコード
 
-This method is used to get the customers of a particular camapign. It will return the response json from Api.
+このメソッドは指定したキャンペーンの対象となっているリードを取得します。  
+このメソッドを使用するには、アクセストークンとキャンペーンIDを指定する必要があります。APIからはJSONレスポンスが返されます。  
 
 ``` java  
 private String getCampaignCustomers(String accessToken, int campaignId) {

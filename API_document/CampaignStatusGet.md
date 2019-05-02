@@ -1,29 +1,12 @@
-﻿## メールステータス
+﻿キャンペーンで送付したメールが、開封されたかクリックされたかなどのステータスを取得します。
 
-To get the list of customers which we send  campaign, mail open , mail link click  of that campaign, we can use the below given campaign
+#### HTTP種類 : GET  
+#### URL : [BASE URL]/SpringRest/campaign/status/get  
+#### HTTP戻り値 : JSON  
 
-#### HTTP種類 : GET
-#### URL : (BASE URL)**/SpringRest/campaign/status/get**
-#### HTTP戻り値 : JSON
-#### パラメータ : 
-| 名 前 |	型	| 必 須 | 
-|:----:|:---:|:---:|
-|access_token	|String	|True|
-|campaignId	|Integer	|True|
-|status	|Integer[] 	|True|
+指定したステータスに合致したリードの一覧の取得、または指定したリードのステータスを取得します。
 
-customerId (Type integer) parameter is also supports this api, it will give all campaigns of that customer having given status(if status given as 1 then will list customer mail opened campaigns).
-
-Status ids of each events
-```
-Mail Send – 0
-Mail Open – 1
-Mail Link Click – 5
-Mail Bounce – 2
-Mail Fail – 8
-```
-
-#### JSON戻り値 例：
+#### JSON戻り値 例：  
 ```json
 {
     "code": 200,
@@ -88,9 +71,26 @@ Mail Fail – 8
 ```
 
 
-### 1. Customers list status by giving campaign id and status
+### 1. キャンペーンIDとステータスを指定してリードリストのステータスを取得する    
 
-This method is used for getting customers who have received mail, mail open, mail link click, bounce etc based on status parameter. You have to pass campaignId, status (status values are mentioned above) and access token. It will return the JSON response from API.
+#### パラメータ :   
+| 名 前 |	型	| 必 須 | 
+|:----:|:---:|:---:|
+|access_token	|String	|True|
+|campaignId	|Integer	|True|
+|status	|Integer[] 	|True|
+
+status： 
+```
+Mail Send – 0
+Mail Open – 1
+Mail Link Click – 5
+Mail Bounce – 2
+Mail Fail – 8
+```
+
+このメソッドは、指定したキャンペーンでstatusパラメータに合致しているリードを取得します。  
+キャンペーンID、ステータス（ステータス値は上記のとおり）、およびアクセストークンを渡す必要があります。 APIからJSONレスポンスを返します。  
 
 #### サンプルコード
 
@@ -127,9 +127,16 @@ private String MailStatusGet(String accessToken , String campaignId, String stat
 String response = MailStatusGet(“98d9a7ea-8669-45e6-b141-f663c8cb35b8”, "525", "0");
 ```
 
-### 2. Customer status by giving campaign id and customerId
+### 2. キャンペーンIDとリードIDを指定してリードのステータスを取得する  
 
-This method is used to get different status of a customer in campaign. It will return the response Json from api.
+#### パラメータ :   
+| 名 前 |	型	| 必 須 | 
+|:----:|:---:|:---:|
+|access_token	|String	|True|
+|campaignId	|Integer	|True|
+|customerId	|Integer[] 	|True|
+
+このメソッドは、キャンペーンにおけるリードのステータスを取得します。APIからJSONレスポンスを返します。  
 
 #### サンプルコード
 ```java

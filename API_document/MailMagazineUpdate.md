@@ -25,8 +25,9 @@
 
 #### サンプルコード  
 
-このメソッドは既存のキャンペーンにリードを追加します。このメソッドを使用するには、キャンペーンID、リードID、アクセストークンを渡す必要があります。
-This method is used for adding customers to existing campaigns. In this method you have to pass campaignId, customers (multiple customers id comma separated) and access token. While calling this method currently given customers will be set as target customer for that campaign, existing customers will be removed. This method will return boolean true if update is success.
+このメソッドは既存のキャンペーンにリードを追加します。このメソッドを使用するには、キャンペーンID、リードID、アクセストークンを渡す必要があります。複数のリードIDを渡す場合は、カンマで区切ってください。  
+このメソッドを実行すると、指定したキャンペーンに既に存在しているリードは除去され、指定したリードが追加されます。
+更新が成功すると True の戻り値を返します。
 
 ```java
 private boolean addTargetCustomerToCampaign(String accessToken , String campaignId, String customers) {
@@ -36,7 +37,7 @@ private boolean addTargetCustomerToCampaign(String accessToken , String campaign
 					"<API_BASE_URL>/SpringRest/campaign/mailmagazine/update?access_token=" + accessToken
 							+ "&campaignId=" + campaignId + "&customers=" + customers);
 
-			HTTP戻り値 response = client.execute(httpPut);
+			HttpResponse response = client.execute(httpPut);
 
 			if (response.getStatusLine().getStatusCode() == 200) {
 				return true;

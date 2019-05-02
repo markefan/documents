@@ -1,44 +1,9 @@
-﻿## リードの取得
+﻿このAPIはリードのリストを取得します。  
+アクセストークンのみ指定した場合は、そのアカウントが持っているすべてのリードを取得します。メールアドレスやリードIDなどいくつかのフィルターで抽出することもできます。  
 
-This api used to get customer list. If you are passing only access token to this api you will get all the customers in this account. There are several filters like, email, customerId etc. 
-
-#### HTTP種類 : GET
-#### URL : (BASE URL)**/SpringRest/customer/get**
+#### HTTP種類 : GET  
+#### URL : [BASE URL]/SpringRest/customer/get  
 #### HTTP戻り値 : JSON
-
-To list all customers details in the account パラメータ need to pass.
-
-#### パラメータ : 
-| 名 前 |	型	| 必 須 | 
-|:----:|:---:|:---:|
-|access_token	|String	|True|
-
-
-To list customer details based on email
-
-#### パラメータ : 
-| 名 前 |	型	| 必 須 | 
-|:----:|:---:|:---:|
-|access_token	|String	|True|
-|email	|String	|True|
-
-To list Customers details based on customerId
-
-#### パラメータ : 
-| 名 前 |	型	| 必 須 | 
-|:----:|:---:|:---:|
-|access_token	|String	|True|
-|customerId	|Integer[]	|True|
-
-To list customers details based on a campaign.
-
-#### パラメータ : 
-
-| 名 前 |	型	| 必 須 | 
-|:----:|:---:|:---:|
-|access_token	|String	|True|
-|campaigns	|Integer[]	|True|
-
 
 #### JSON戻り値 例：
 ```json
@@ -129,7 +94,12 @@ To list customers details based on a campaign.
 ```
 
 
-### 1. This method is used to list all customers in that account. It will return Response Json from Api.
+### 1. アカウントに属するすべてのリードを取得する（アクセストークンのみ指定）  
+
+#### パラメータ : 
+| 名 前 |	型	| 必 須 | 
+|:----:|:---:|:---:|
+|access_token	|String	|True|
 
 #### サンプルコード
 ```java
@@ -165,7 +135,13 @@ private String getAllCustomers(String accessToken) {
 String response = getAllCustomers(“98d9a7ea-8669-45e6-b141-f663c8cb35b8”);
 ```
 
-### 2. This method is used to list all customers based on email. It will return Response Json from Api.
+### 2. メールアドレスに基づいてリードを取得する  
+
+#### パラメータ : 
+| 名 前 |	型	| 必 須 | 
+|:----:|:---:|:---:|
+|access_token	|String	|True|
+|email	|String	|True|  
 
 #### サンプルコード
 ```java
@@ -199,4 +175,21 @@ private String getCustomerByEmail(String accessToken, String email) {
 #### 呼び出し方法
 ```java
 String response = getCustomerByEmail(“98d9a7ea-8669-45e6-b141-f663c8cb35b8”, “abc@gmail.com”);
-```
+```  
+
+### 3. リードIDに基づいてリードを取得する   
+
+#### パラメータ : 
+| 名 前 |	型	| 必 須 | 
+|:----:|:---:|:---:|
+|access_token	|String	|True|
+|customerId	|Integer[]	|True|
+
+### 4. キャンペーンに基づいてリードを取得する  
+
+#### パラメータ : 
+
+| 名 前 |	型	| 必 須 | 
+|:----:|:---:|:---:|
+|access_token	|String	|True|
+|campaigns	|Integer[]	|True|

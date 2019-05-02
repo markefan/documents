@@ -1,11 +1,9 @@
-﻿## セグメントリードの取得
+﻿指定したセグメントに属するリードのリストを取得します。  
 
-This api is used to get the list of customers in a segment. We need to pass access token and segment ids.It will retun customers in that segments.
-
-#### HTTP種類 : GET
-#### URL : (BASE URL)**/SpringRest/segment/getCustomerBySegment**
-#### HTTP戻り値 : JSON
-#### パラメータ :
+#### HTTP種類 : GET  
+#### URL : [BASE URL]/SpringRest/segment/getCustomerBySegment  
+#### HTTP戻り値 : JSON  
+#### パラメータ :  
 | 名 前 |	型	| 必 須 | 
 |:----:|:---:|:---:|
 |accessToken	|String	|True|
@@ -56,7 +54,8 @@ This api is used to get the list of customers in a segment. We need to pass acce
 
 #### サンプルコード
 
-This method is used to get list of customers in a segment. You need to pass access token and segment ids to this method. It will return response Json from Api.
+このメソッドは指定したセグメントのリードリストを取得します。  
+このメソッドを使用するには、アクセストークンとセグメントIDを指定する必要があります。APIからJSONレスポンスが返されます。
 
 ```java
 private String getCustomerBySegments(String accessToken, String segmentIds) {
@@ -88,7 +87,6 @@ private String getCustomerBySegments(String accessToken, String segmentIds) {
 
 #### 呼び出し方法
 ```java
-String response = getCustomerBySegments(“98d9a7ea-8669-45e6-b141-f663c8cb35b8”, “28”); // one  segment
-
-String response = getCustomerBySegments(“98d9a7ea-8669-45e6-b141-f663c8cb35b8”, “28,29”); // multiple segments passing
+String response = getCustomerBySegments(“98d9a7ea-8669-45e6-b141-f663c8cb35b8”, “28”); // １つのセグメント  
+String response = getCustomerBySegments(“98d9a7ea-8669-45e6-b141-f663c8cb35b8”, “28,29”); // 複数のセグメント
 ```

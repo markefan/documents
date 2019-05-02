@@ -1,21 +1,19 @@
-﻿## メール拡張ステータス
+﻿キャンペーンで送付したメールが未開封または未クリックであるリードリストを取得します。
 
-To get the list of customers which we send  campaign, mail send but not open , mail open but not link click  of that campaign, we can use the below given campaign
-
-#### HTTP種類 : GET
-#### URL : (BASE URL)**/SpringRest/campaign/status/advanced/get**
-#### HTTP戻り値 : JSON
-#### パラメータ : 
+#### HTTP種類 : GET  
+#### URL : [BASE URL]/SpringRest/campaign/status/advanced/get  
+#### HTTP戻り値 : JSON  
+#### パラメータ :  
 | 名 前 |	型	| 必 須 | 
 |:----:|:---:|:---:|
 |access_token	|String	|True|
 |campaignId	|Integer	|True|
 |status	|Integer[] 	|True|
 
-Possible status values
+ステータス：  
 ```
-Mail send but not open – 0
-Mail open but not link clicked - 1
+メール未開封 – 0
+メールを開封したがリンク未クリック - 1
 ```
 
 #### JSON戻り値 例：
@@ -83,7 +81,7 @@ Mail open but not link clicked - 1
 ```
 
 #### サンプルコード
-This method is used to get list of customers status based on campaign and status. This method will return Response Json from Api.
+このメソッドは指定したキャンペーンIDとステータスに合致したリードのリストを取得します。このメソッドはAPIからJSONレスポンスを返します。  
 
 ```java
 private String MailStatusLatestGet(String accessToken , String campaignId, String status) {
