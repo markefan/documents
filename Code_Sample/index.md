@@ -7,7 +7,7 @@ Markefanでは、「静的フォーム」または「ダイナミックフォー
 
 ## 日付入力時のカレンダー表示[（実行例）](https://staging.lead-nurture.com/form/dynamicForm/9/412)  
 
-    ![](./img/calender.png)
+- ![](./img/calender.png)
 
 ``` html
 <div class="element-date">
@@ -18,7 +18,7 @@ Markefanでは、「静的フォーム」または「ダイナミックフォー
 
 ## 郵便番号による住所自動入力[（実行例）](https://lead-nurture.com/form/dynamicForm/22/129)  
 
-    ![](./img/postalcode.png)
+- ![](./img/postalcode.png)
 
 ``` html
 ここにコードを記述
