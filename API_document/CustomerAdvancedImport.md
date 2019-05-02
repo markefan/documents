@@ -1,6 +1,5 @@
-﻿# Markefanへのリードの高度なインポート  
-
-このAPIでは、This api is used to import customers to MIP. Using parameter doMergeCsvWithDb パラメータを指定したリードのインポートを行います。  
+﻿CSVファイルで作成したリードデータをMarkefanのリードリストにインポートします。  
+このAPIでは、doMergeCsvWithDb パラメータを指定したリードのインポートを行います。  
 もし既にリードが存在している場合、そのリードはCSVファイルの内容で更新されます。この場合、既に存在するリードIDは、ext_customer_id で指定します。  
 
 #### HTTP種類 : POST

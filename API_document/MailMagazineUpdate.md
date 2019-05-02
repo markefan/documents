@@ -1,7 +1,7 @@
-﻿# 既存キャンペーンにリードを追加する  
+﻿既存キャンペーンに指定したリードを追加します。  
 
 #### HTTP種類 : PUT  
-#### URL : <BASE URL>/SpringRest/campaign/mailmagazine/update  
+#### URL : [BASE URL]/SpringRest/campaign/mailmagazine/update  
 #### HTTP戻り値 : JSON  
 #### パラメータ :  
 
@@ -25,7 +25,7 @@
 
 #### サンプルコード  
 
-
+このメソッドは既存のキャンペーンにリードを追加します。このメソッドを使用するには、キャンペーンID、リードID、アクセストークンを渡す必要があります。
 This method is used for adding customers to existing campaigns. In this method you have to pass campaignId, customers (multiple customers id comma separated) and access token. While calling this method currently given customers will be set as target customer for that campaign, existing customers will be removed. This method will return boolean true if update is success.
 
 ```java

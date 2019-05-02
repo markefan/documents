@@ -1,4 +1,4 @@
-﻿# Markefanへのリードのインポート  
+﻿CSVファイルで作成したリードデータをMarkefanのリードリストにインポートします。  
 
 #### HTTP種類 : POST  
 #### URL : <BASE URL>/SpringRest/customer/import  

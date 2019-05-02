@@ -1,4 +1,5 @@
-﻿Markefanへログインする  
+﻿Markefanにログインを行うAPIです。  
+Markefanの各APIを使用するときには、最初にこのログインAPIを用いてユーザーIDやアクセストークンを取得する必要があります。  
 
 #### HTTP種類 : POST
 #### URL : [BASE URL]/SpringRest/account/user/login
@@ -8,7 +9,9 @@
 | 名 前 |	型 | 必 須 |
 |:----:|:---:|:---:|
 |Username|String|True|
-|Password|String|True|
+|Password|String|True|  
+
+※Passwordは、MD5でハッシュ化した値を渡します。  
 
 #### HTTP戻り値 : JSON  
 
