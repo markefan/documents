@@ -7,8 +7,13 @@ Markefanでは、「静的フォーム」または「ダイナミックフォー
 
 * 日付入力時のカレンダー表示[（実行例）](https://staging.lead-nurture.com/form/dynamicForm/9/412)  
 
+    ![](./img/calender.png)
+
 ``` html
-ここにコードを記述
+<div class="element-date">
+    <label class="title">Date</label>
+    <input class="large" data-format="yyyy-mm-dd" type="date" name="date" placeholder="yyyy-mm-dd">
+</div>
 ```
 
 
