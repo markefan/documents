@@ -1,4 +1,6 @@
-﻿#### HTTP種類 : POST  
+﻿# Markefanへのリードのインポート  
+
+#### HTTP種類 : POST  
 #### URL : <BASE URL>/SpringRest/customer/import  
 #### HTTP戻り値 : JSON  
 #### パラメータ : 
