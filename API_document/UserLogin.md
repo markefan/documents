@@ -1,7 +1,7 @@
-﻿# Markefanへログインする  
+﻿Markefanへログインする  
 
 #### HTTP種類 : POST
-#### URL : <BASE URL>/SpringRest/account/user/login
+#### URL : [BASE URL]/SpringRest/account/user/login
 
 #### パラメータ  
 
