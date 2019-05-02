@@ -5,14 +5,14 @@ Markefanでは、「静的フォーム」または「ダイナミックフォー
 
 ユーザーに入力を促すような魅力的なフォームとするには、ダイナミックフォームで以下のような装飾を行ってみましょう。 
 
-* 日付入力時のカレンダー表示[実行例](https://staging.lead-nurture.com/form/dynamicForm/9/412)  
+* 日付入力時のカレンダー表示[（実行例）](https://staging.lead-nurture.com/form/dynamicForm/9/412)  
 
 ``` html
 ここにコードを記述
 ```
 
 
-* 郵便番号による住所自動入力[実行例](https://lead-nurture.com/form/dynamicForm/22/129)  
+* 郵便番号による住所自動入力[（実行例）](https://lead-nurture.com/form/dynamicForm/22/129)  
 
 ``` html
 ここにコードを記述
